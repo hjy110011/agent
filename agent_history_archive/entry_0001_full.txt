@@ -1,0 +1,1 @@
+为 D:\ai_workspace\v41 目录下的多智能体路由系统编写了完整的 AGENT_README.md 文档。文档基于对项目源代码的全面分析，包括：agents/ 目录下5个Agent的代码分析、core/ 核心层配置、tools/ 工具层、main.py 入口等。

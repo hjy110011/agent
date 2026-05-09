@@ -1,0 +1,37 @@
+{
+  "version": "1.0",
+  "created_at": "2026-05-09T17:02:06.183729",
+  "entries": [
+    {
+      "id": 1,
+      "category": "snapshot",
+      "key": "生成 AGENT_README.md 文档_full",
+      "step": 1,
+      "timestamp": "2026-05-09T17:05:00.096108",
+      "summary_len": 138,
+      "full_len": 138,
+      "summary_file": "entry_0001_summary.json",
+      "full_file": "entry_0001_full.txt",
+      "metadata": {
+        "type": "history_step_full",
+        "step_name": "生成 AGENT_README.md 文档"
+      }
+    },
+    {
+      "id": 2,
+      "category": "snapshot",
+      "key": "生成 AGENT_README.md 文档_summary",
+      "step": 1,
+      "timestamp": "2026-05-09T17:05:00.096108",
+      "summary_len": 157,
+      "full_len": 157,
+      "summary_file": "entry_0002_summary.json",
+      "full_file": "entry_0002_full.txt",
+      "metadata": {
+        "type": "history_step_summary",
+        "step_name": "生成 AGENT_README.md 文档"
+      }
+    }
+  ],
+  "next_id": 3
+}

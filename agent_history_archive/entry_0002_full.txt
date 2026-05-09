@@ -1,0 +1,1 @@
+已生成 AGENT_README.md（603行，24.3KB），包含：项目概述、系统架构图、5个Agent角色职责说明（RouterAgent/PMAgent/CoderAgent/DBAAgent/ReviewerAgent）、项目结构树、配置使用方式、工具集总览、新增Agent教程、依赖环境要求、版本历史。
