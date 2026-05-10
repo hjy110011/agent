@@ -1,0 +1,115 @@
+[build-system]
+requires = ["setuptools>=68.0", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "multi-agent-system"
+version = "48.0.0"
+description = "多 Agent 协作系统 - 基于 LangChain 的企业级多智能体路由系统，实现从需求分析到代码生成的自动化开发流程"
+readme = "README.md"
+requires-python = ">=3.10"
+license = {text = "MIT"}
+authors = [
+    {name = "Multi-Agent Team", email = "dev@multi-agent-system.dev"}
+]
+keywords = ["agent", "llm", "langchain", "automation", "multi-agent", "deepseek"]
+
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Developers",
+    "License :: OSI Approved :: MIT License",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Code Generators",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+]
+
+dependencies = [
+    # 核心框架
+    "langchain>=0.1.0",
+    "langchain-core>=0.1.0",
+    "langchain-community>=0.1.0",
+    "langchain-openai>=0.1.0",
+    # LLM 接口
+    "openai>=1.0.0",
+    # Web 界面
+    "gradio>=4.0.0",
+    # 数据库
+    "sqlalchemy>=2.0.0",
+    # 向量数据库
+    "chromadb>=0.4.0",
+    # 工具库
+    "pydantic>=2.0.0",
+    "python-dotenv>=1.0.0",
+    "pyyaml>=6.0",
+    "requests>=2.31.0",
+    "tqdm>=4.66.0",
+    "rich>=13.7.0",
+    # 网页抓取
+    "playwright>=1.40.0",
+    "beautifulsoup4>=4.12.0",
+    # 代码质量（运行时）
+    "flake8>=7.0.0",
+    "autopep8>=2.0.0",
+]
+
+[project.optional-dependencies]
+dev = [
+    "pytest>=7.4.0",
+    "pytest-asyncio>=0.21.0",
+    "black>=23.0.0",
+    "ruff>=0.1.0",
+]
+db = [
+    "psycopg2-binary>=2.9.0",
+    "pymysql>=1.0.0",
+]
+
+[project.urls]
+Homepage = "https://github.com/your-org/multi-agent-system"
+Repository = "https://github.com/your-org/multi-agent-system.git"
+Documentation = "https://github.com/your-org/multi-agent-system#readme"
+
+[project.scripts]
+multi-agent = "main:run_cli_mode"
+multi-agent-web = "main:run_web_ui_mode"
+
+[tool.setuptools.packages.find]
+include = ["agents*", "core*", "tools*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+python_files = ["test_*.py"]
+python_classes = ["Test*"]
+python_functions = ["test_*"]
+addopts = "-v --tb=short"
+
+[tool.black]
+line-length = 100
+target-version = ["py310", "py311", "py312"]
+include = '\.pyi?$'
+extend-exclude = '''
+/(
+    \.git
+  | \.idea
+  | __pycache__
+  | \.pytest_cache
+  | agent_history_archive
+  | agent_vector_db
+  | \.agent_backups
+)/
+'''
+
+[tool.ruff]
+line-length = 100
+target-version = "py310"
+
+[tool.ruff.lint]
+select = ["E", "F", "W", "I", "N", "UP"]
+
+[tool.ruff.format]
+quote-style = "double"
+indent-style = "space"
+line-ending = "auto"
