@@ -176,7 +176,7 @@
 
 ```bash
 # 1. 克隆仓库
-git clone https://github.com/your-org/multi-agent-system.git
+git clone -b v50 https://github.com/hjy110011/agent.git
 cd multi-agent-system
 
 # 2. 创建虚拟环境（推荐）
